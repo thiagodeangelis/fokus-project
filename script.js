@@ -7,16 +7,19 @@ const divTimer = document.querySelector('#timer');
 const imagem = document.querySelector('.app__image');
 const texto = document.querySelector('.app__title');
 const textoStrong = document.querySelector('.app__title-strong');
-const botoes = document.querySelectorAll('.app__card-button')
+const botoes = document.querySelectorAll('.app__card-button');
+const musicaFocoInput = document.querySelector('#alternar-musica');
+const musica = new Audio ('/sons/luna-rise-part-one.mp3');
 const timerFoco = 1500;
 const timerDescansoCurto = 300;
 const timerDescansoLongo = 900;
+musica.loop = true;
 
 
+musicaFocoInput.addEventListener('change', () => {
 
-
-// O elemento HTML no qual as imagens de cada contexto irão trocar de posição;
-// O elemento HTML onde as frases de cada contexto irão trocar de posição.
+    musica.paused ? musica.play() : musica.pause();
+})
 
 
 buttonFoco.addEventListener('click', () => {
