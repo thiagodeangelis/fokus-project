@@ -20,19 +20,48 @@ const timerDescansoLongo = 900;
 
 buttonFoco.addEventListener('click', () => {
 
-    html.setAttribute('data-contexto', 'foco');
-    imagem.setAttribute('src', '/imagens/foco.png');
+    alterarContexto('foco');
 });
 
 buttonDescansoCurto.addEventListener('click', () => {
 
-    html.setAttribute('data-contexto', 'descanso-curto');
-    imagem.setAttribute('src', '/imagens/descanso-curto.png');
+    alterarContexto('descanso-curto');
 });
 
 buttonDescansoLongo.addEventListener('click', () => {
 
-    html.setAttribute('data-contexto', 'descanso-longo');
-    imagem.setAttribute('src', '/imagens/descanso-longo.png');
+    alterarContexto('descanso-longo');
 });
 
+
+function alterarContexto(contexto) {
+    
+    html.setAttribute('data-contexto', contexto);
+    imagem.setAttribute('src', `/imagens/${contexto}.png`); 
+   
+    switch (contexto) {
+        case "foco":
+         texto.innerHTML = `Otimize sua produtividade,<br>
+                <strong class="app__title-strong">mergulhe no que importa.</strong>`
+
+            break;
+
+            case "descanso-curto":
+                texto.innerHTML =
+         `
+    Que tal dar uma respirada? <strong class="app__title-strong">Faça uma pausa curta!</strong>
+    ` 
+
+            break;
+
+            case "descanso-longo":
+         
+            texto.innerHTML = `
+    Hora de voltar à superfície.<strong class="app__title-strong"> Faça uma pausa longa.</strong>
+    `
+            break;
+    
+        default:
+            break;
+    }
+    }
