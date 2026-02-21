@@ -49,15 +49,23 @@ https://thiagodeangelis.github.io/fokus-project/
 ---
 
 ## 📂 Estrutura do Projeto
+
+```bash
 Fokus/
 │
 ├── imagens/
+│   ├── foco.png
+│   ├── descanso-curto.png
+│   ├── descanso-longo.png
+│   └── logo.png
+│
 ├── assets/
-│ └── fokus-demo.gif
+│   └── fokus-demo.gif
 │
 ├── styles.css
 ├── script.js
 └── index.html
+```
 
 
 ---
